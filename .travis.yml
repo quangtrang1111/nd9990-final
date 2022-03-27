@@ -4,6 +4,7 @@ node_js:
   - 16
 
 before_script:
+  - travis encrypt "$AWS_SECRET_KEY"
   - cd client
   - npm install
 
