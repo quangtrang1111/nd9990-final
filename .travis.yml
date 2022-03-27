@@ -4,11 +4,11 @@ node_js:
   - 16
 
 before_script:
-  - apt-get install ruby ruby-dev
-  - apt-get install gcc
-  - apt-get install make
-  - gem install travis
-  - travis encrypt "$AWS_SECRET_KEY"
+  - sudo pt-get install ruby ruby-dev
+  - sudo apt-get install gcc
+  - sudo apt-get install make
+  - sudo gem install travis
+  - sudo travis encrypt "$AWS_SECRET_KEY"
   - cd client
   - npm install
 
