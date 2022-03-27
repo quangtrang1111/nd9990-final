@@ -11,8 +11,9 @@ script:
   - npm run build
 
 deploy:
+  - ls
   - provider: s3
-    access_key_id: "AKIAWVBD4PXTZ6HFZRFA"
+    access_key_id: $AWS_ACCESS_KEY
     secret_access_key: "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"
     bucket: "my-album-app"
     region: "us-west-1"
