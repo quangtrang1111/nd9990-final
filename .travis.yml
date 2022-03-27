@@ -11,13 +11,13 @@ script:
   - npm run build
 
 deploy:
-  - ls
+  - cd client
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY
-    secret_access_key: "8bqZmCecpmwPJukYwL5FJAP89GLDGZO19zq7Qoql"
+    secret_access_key: $AWS_SECRET_KEY
     bucket: "my-album-app"
     region: "us-west-1"
-    local_dir: "client/build"
+    local_dir: "build"
     skip_cleanup: true
     on:
       branch: main
