@@ -4,12 +4,6 @@ node_js:
   - 16
 
 before_script:
-  - sudo apt-get install ruby ruby-dev
-  - sudo apt-get install gcc
-  - sudo apt-get install make
-  - sudo gem update --system
-  - sudo gem install travis
-  - sudo travis encrypt "$AWS_SECRET_KEY"
   - cd client
   - npm install
 
@@ -18,8 +12,8 @@ script:
 
 deploy:
   - provider: s3
-    access_key_id: "$AWS_ACCESS_KEY"
-    secret_access_key: "$AWS_SECRET_KEY"
+    access_key_id: "AKIAWVBD4PXTZ6HFZRFA"
+    secret_access_key: "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"
     bucket: "my-album-app"
     region: "us-west-1"
     local_dir: "client/build"
